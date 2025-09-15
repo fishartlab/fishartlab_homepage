@@ -1,0 +1,113 @@
+/*  上部のナビゲーション */
+.progress-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+.progress-nav.visible {
+    opacity: 1;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(0);
+}
+
+.progress-nav-item {
+    margin: 0 15px;
+    position: relative;
+    text-align: center;
+    flex: 1;
+    max-width: 120px;
+}
+
+.progress-nav-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #6c757d;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.progress-nav-link.active {
+    color: #0d6efd;
+}
+
+.progress-nav-link.active .progress-nav-icon {
+    background: #0d6efd;
+    color: white;
+    transform: scale(1.1);
+}
+
+.progress-nav-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #f8f9fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+
+.progress-nav-link:hover {
+    color: #0d6efd;
+}
+
+.progress-nav-link:hover .progress-nav-icon {
+    background: #e9ecef;
+}
+
+.progress-bar {
+    position: absolute;
+    top: 25px;
+    left: -70%;
+    width: 140%;
+    height: 3px;
+    background: #e9ecef;
+    z-index: -1;
+}
+
+@media (max-width: 768px) {
+    .progress-nav {
+        padding: 10px 5px;
+        overflow-x: auto;
+        justify-content: flex-start;
+    }
+
+    .progress-nav-item {
+        margin: 0 8px;
+        min-width: 40px;
+    }
+
+    .progress-nav-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    .progress-nav-link span {
+        font-size: 10.5px;
+    }
+
+    .progress-bar {
+        display: none;
+    }
+
+    body {
+        padding-top: 70px;
+    }
+}

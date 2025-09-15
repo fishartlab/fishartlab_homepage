@@ -1,0 +1,105 @@
+/* フッターにあるリンク */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 24px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.social-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent 0%, rgba(255, 255, 255, 0.2) 100%);
+    transform: translateX(-100%);
+    transition: transform 0.5s ease;
+}
+
+.social-link:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.social-link:hover::before {
+    transform: translateX(0);
+}
+
+.social-link.x {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.social-link.x:hover {
+    background: #000;
+}
+
+.social-link.instagram {
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+}
+
+.social-link.youtube {
+    background: #ff0000;
+}
+
+.social-link.youtube:hover {
+    background: #cc0000;
+}
+
+.social-link.line-footer {
+    background: #06c755;
+}
+
+.social-link.line-footer:hover {
+    background: #05a344;
+}
+
+.social-link.special {
+    background: linear-gradient(135deg, #9c27b0, #673ab7);
+    position: relative;
+}
+
+.social-link.special:hover {
+    background: linear-gradient(135deg, #8e24aa, #5e35b1);
+}
+
+.special-icon {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .social-links {
+        gap: 15px;
+    }
+
+    .social-link {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+
+    .special-icon {
+        font-size: 12px;
+    }
+}
