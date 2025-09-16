@@ -1,0 +1,133 @@
+/* 「料金表」セクションのテーブル */
+table {
+    text-align: center;
+}
+
+td,
+th {
+    vertical-align: middle;
+}
+
+.table-red {
+
+    tr:nth-child(odd):hover,
+    tr:nth-child(odd):hover+tr,
+    tr:nth-child(even):hover,
+    tr:has(+ tr:nth-child(even):hover) {
+        background-color: #f1aeb5;
+    }
+}
+
+.table-red thead tr th {
+    background-color: #dc3546be;
+}
+
+.table-red-striped {
+    background-color: #f8d7da;
+}
+
+.table-yellow-standard-sized {
+
+    tr:nth-child(odd):hover,
+    tr:nth-child(odd):hover+tr,
+    tr:nth-child(even):hover,
+    tr:has(+ tr:nth-child(even):hover) {
+        background-color: #ffe69c;
+    }
+}
+
+.table-yellow-non-standard-sized {
+    tr:nth-child(1):hover,
+
+    tr:nth-child(2):hover,
+    tr:nth-child(2):hover+tr,
+
+    tr:nth-child(3):hover,
+    tr:has(+ tr:nth-child(3):hover),
+
+    tr:nth-child(3n + 4):hover,
+    tr:nth-child(3n + 4):hover+tr,
+    tr:nth-child(3n + 4):hover+tr+tr,
+
+    tr:nth-child(3n + 5):hover,
+    tr:has(+ tr:nth-child(3n + 5):hover),
+    tr:nth-child(3n + 5):hover+tr,
+
+    tr:nth-child(3n + 6):hover,
+    tr:has(+ tr:nth-child(3n + 6):hover),
+    tr:has(+ tr + tr:nth-child(3n + 6):hover) {
+        background-color: #ffe69c;
+    }
+}
+
+.table-yellow-standard-sized thead tr th {
+    background-color: #ffc107;
+}
+
+.table-yellow-non-standard-sized thead tr th {
+    background-color: #ffc107;
+}
+
+.table-yellow-striped {
+    background-color: #fff3cd;
+}
+
+.table-blue-standard-sized {
+
+    tr:nth-child(odd):hover,
+    tr:nth-child(odd):hover+tr,
+    tr:nth-child(even):hover,
+    tr:has(+ tr:nth-child(even):hover) {
+        background-color: #9eeaf9;
+    }
+}
+
+.table-blue-non-standard-sized {
+    tr:nth-child(1):hover,
+
+    tr:nth-child(2):hover,
+    tr:nth-child(2):hover+tr,
+
+    tr:nth-child(3):hover,
+    tr:has(+ tr:nth-child(3):hover),
+
+    tr:nth-child(3n + 4):hover,
+    tr:nth-child(3n + 4):hover+tr,
+    tr:nth-child(3n + 4):hover+tr+tr,
+
+    tr:nth-child(3n + 5):hover,
+    tr:has(+ tr:nth-child(3n + 5):hover),
+    tr:nth-child(3n + 5):hover+tr,
+
+    tr:nth-child(3n + 6):hover,
+    tr:has(+ tr:nth-child(3n + 6):hover),
+    tr:has(+ tr + tr:nth-child(3n + 6):hover) {
+        background-color: #9eeaf9;
+    }
+}
+
+.table-blue-standard-sized thead tr th {
+    background-color: #0dcaf0;
+}
+
+.table-blue-non-standard-sized thead tr th {
+    background-color: #0dcaf0;
+}
+
+.table-blue-striped {
+    background-color: #cff4fc;
+}
+
+.table-green thead tr th {
+    background-color: #21ac6b;
+}
+
+.table-green-striped {
+    background-color: #d1e7dd;
+}
+
+td.table-green-striped {
+    background-color: #d1e7dd;
+    position: relative;
+    z-index: 1;
+}
